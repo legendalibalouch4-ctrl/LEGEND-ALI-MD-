@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEGEND ALI MD</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;min-height:100vh;font-family:Arial,sans-serif;
+color:white;text-align:center;
+background:linear-gradient(135deg,#080014,#17072f,#001d35);
+}
+header{padding:28px 12px;background:#08000ddd;border-bottom:1px solid #a855f7}
+h1{color:#d8a4ff;text-shadow:0 0 15px #a855f7}
+.container{
+width:90%;max-width:430px;margin:35px auto;padding:25px 18px;
+border:1px solid #9b4dff;border-radius:20px;
+background:#10091ddd;box-shadow:0 0 25px #6519b5;
+}
+.anime{font-size:65px;margin:10px}
+input,button{width:100%;padding:14px;margin-top:12px;border-radius:10px;font-size:16px}
+input{background:#080512;color:white;border:1px solid #9b4dff}
+button{background:linear-gradient(90deg,#7025ce,#153fbb);color:white;border:0;font-weight:bold}
+.note{color:#c9b6e8;font-size:13px;line-height:1.6}
+footer{padding:25px;color:#c9b6e8}
+</style>
+</head>
+<body>
+<header>
+<h1>👑 LEGEND ALI MD</h1>
+<p>✨ WELCOME TO THE ALI WORLD ✨</p>
+</header>
+<div class="container">
+<div class="anime">🌌 ⚔️ 🌌</div>
+<h2>ALI WORLD</h2>
+<p>Your Anime WhatsApp Bot</p>
+<button onclick="welcome()">🔊 Play Welcome Audio</button>
+<hr style="border-color:#542477;margin:25px 0">
+<h3>🤖 PAIRING CENTER</h3>
+<input id="number" type="tel" placeholder="Country code + WhatsApp number">
+<button onclick="pair()">GENERATE PAIRING CODE</button>
+<p id="result" class="note">Pairing service is not connected yet.</p>
+<p class="note">Never share your WhatsApp verification codes.</p>
+</div>
+<footer>👑 LEGEND ALI MD · THE ALI WORLD</footer>
+<script>
+function welcome(){
+const msg=new SpeechSynthesisUtterance("WELCOME TO THE ALI WORLD");
+msg.lang="en-US";msg.rate=0.85;
+speechSynthesis.cancel();speechSynthesis.speak(msg);
+}
+function pair(){
+document.getElementById("result").textContent=
+"Pairing backend is not connected yet. Please try again later.";
+}
+</script>
+</body>
+</html>
